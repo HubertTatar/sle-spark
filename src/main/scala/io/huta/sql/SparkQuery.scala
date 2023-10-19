@@ -10,8 +10,6 @@ object SparkQuery {
       .master("spark://localhost:7077")
       .getOrCreate()
 
-    ss.conf
-
     val df = ss.read.parquet(
       "/user/ingest/ingested/dt=20231019/hr=09/fd409ca4-a813-9480-409c-a4a813948057"
     )
